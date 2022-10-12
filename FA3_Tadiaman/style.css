@@ -1,0 +1,38 @@
+body{
+background-image: url(images/bgpic2.jpg);
+background-size: cover, height: 50%; 
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-attachment: scroll;
+background-position: center;
+}
+h1{
+width: 250px;
+background-color: #73e600;
+text-align: center;
+font-family: Arial Black;
+border-style: dotted;
+border-color: blue;
+border-width: 2px; 
+padding: 10px 15px 10px 15px;
+margin: auto;
+margin-bottom: 20px; 
+}
+
+p{
+text-align: justify;
+background-color: hsl(50, 50%, 75%);
+font-style: italized;
+padding: 20px;
+border-style: solid groove;
+border-width: 3px;
+margin: 500px;
+margin: auto; 
+}
+
+span{
+font-weight: bold;
+color: rgb(200,100,200);
+margin-right: 5px;
+margin-left: 2px; 
+}
