@@ -1,0 +1,65 @@
+*{
+	margin: auto;
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+
+nav{
+	width: 100%;
+	height: 75px;
+	line-height: 75px;
+	padding: 0px 0px;
+	position: sticky;
+	background: #ADD8E6;
+}
+
+nav .header{
+	float: left;
+}
+
+nav ul{
+	float: right;
+}
+
+nav li{
+	display: inline;
+	list-style: none;
+}
+
+nav ul li{
+	list-style: none;
+	display: inline-block;
+	}
+
+nav li a{
+	font-size: 25px;
+	padding: 0px 50px;
+	text-decoration: none;
+}
+
+nav li a:hover{
+	color: #333;
+}
+
+p{
+	font-family: cursive;
+	text-align: center;
+	box-sizing: border-box;
+	color: #87CEFA;
+	background: #008080;
+	
+}
+
+body{
+	margin: 0px;
+	background-image: url("https://previews.123rf.com/images/kentoh/kentoh1005/kentoh100500107/6856693-poverty-grunge-background-in-black-harsh-tones.jpg");
+	background-size: cover;
+}
+
+h1{
+	text-align: right;
+	box-sizing: border-box;
+	background: #333;
+	color: white;
+}
