@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8"> 
+	<meta name="Tadiaman" content="FA6_Tadiaman"> 
+	<link rel="stylesheet" type="text/css">
+	<title>Tadiaman, Francis Miguel T.</title>
+
+		<style>
+		body{
+		font-size:35px;
+		}
+
+		#a1stlink{
+		text-decoration:none;
+		}
+
+		#a1stlink:link { 
+		background-color:lightgreen;
+		}
+
+		#a1stlink:visited {
+		background-color:pink;
+		color:white;
+		}
+
+		#a1stlink:hover {
+		background-color:silver;
+		}
+
+		#a1stlink: active{
+		background-color:yellow;
+		}
+
+		#a2ndlink{
+		text-decoration:none;
+		}
+
+		#a2ndlink:link { 
+		background-color:orange;
+		}
+
+		#a2ndlink:visited {
+		background-color:cyan
+		color:brown;
+		}
+
+		#a2ndlink:hover {
+		background-color:silver;
+		color:brown;
+		}
+
+		#a2ndlink: active{
+		background-color:brown;
+		}
+
+		div{
+		border:2px solid black;
+		width:200px;
+		height:175px;
+		padding:10px;
+		}
+
+		div:target#div1{
+		background-color:green;
+		color:blue;
+		}
+
+		div:target#div2{
+		background-color:pink;
+		color:red;
+		border: 10px dotted green;
+		}
+
+	</style>
+	</head>
+		
+	<body>
+		<a id="a1stlink" href="#div1">First Link</a>
+		<a id="a2ndlink" href="#div2">Second Link</a>
+		<br><br>
+		<div id="div1">Div 1 here</div>
+		<br>
+		<div id="div2">Div 2 here</div>
+		</body>
+</html>
