@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="UTF-8">
+  			<meta name="author" content="Francis">
+  			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Tadiaman Formative Assessment 9</title>
+</head>
+	<script>
+			function imgReplace() {
+				document.getElementById("fmimage").src = "2ndimage.jpg";
+			}
+			function imgOriginal() {
+				document.getElementById("fmimage").src = "original.jpg";
+			}
+			
+	</script>
+
+	<body>
+		<img id="fmimage" src="original.jpg">
+			<button onclick= "imgReplace()">Replace Image</button>
+			<button onclick= "imgOriginal()">Revert to Original</button>
+		</body>
+</html>
