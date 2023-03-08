@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tadiaman Formative Assessment 10</title>
+</head>
+	<body>
+	<script>
+		
+
+	
+		var rNum = Math.floor(Math.random() * 1001);
+
+		document.write("randomly generated number: " + rNum);
+
+		document.write("<br>");
+		var onesP = rNum % 10;
+		var tensP = Math.floor((rNum % 100) / 10) * 10;
+		var hundredsP = Math.floor(rNum / 100) * 100;
+		
+		document.write("Breakdown: " + hundredsP + ", " + tensP + ", " + onesP);	
+
+	</script>
+</body>
+</html>
