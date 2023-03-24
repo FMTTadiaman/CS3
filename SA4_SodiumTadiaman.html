@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Car Deprecation Calculator</title>
+		<meta name="viewport"content="width=device-width,initial-scale=1.0">
+        <style>
+        	body {background: lightblue; 
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            span {color: maroon}
+        </style>
+
+	</head>
+<body>
+	<h1> Car Depreciation Calculator </h1>
+	<h2> Your Car Model: <span id="model"> </span></h2>
+    <h2> Car Cost: <span id="cost"> </span></h2>
+    <h2> Age of your Car: <span id="age"> </span></h2>
+    <h2> Good Condition?: <span id="condition"> </span></h2>
+    <h2> Your Car's Current Market Value <span id="currentvalue"> </span></h2>
+    
+    <button onclick="enterCar()"> Enter your Car information </button>
+    <script>
+    	/* do not forget to place comments on the script */
+    	function enterCar() {
+        	carmodel = prompt("Enter Car Model");
+            carcost = prompt("Enter Cost of the Car");
+            carage = prompt("How old is your car?");
+            good = confirm("In Good Condition? Ok for Yes / Cancel for No");
+            model.innerHTML = carmodel;
+            cost.innerHTML = carcost;
+            age.innerHTML = carage;
+            condition.innerHTML = (good) ? "Yes" : "No";      
+            computeMarketValue(parseFloat(cost),parseFloat(age),good); // create this function 
+}
+		function computeMarketValue(cost, age, condition){
+            var cmv = 0; 
+			if(carage > 10){ // checks if carage is 10, if carage is 10 cmv is 70000
+			cmv = 70000;
+			}
+			else if(carage >= 8 && carage < 10){// check if car age is >=8 && < 10 and displays 100000 if it is true
+			cmv = 100000;
+			}
+			else if(carage >=5  && carage < 8){ // check if car age is >5 && < 8 car cost will be multiplied by 0.25
+			cmv = carcost * 0.25;
+			}
+			else if(carage < 5){ // check if carage is <  5. if car age is < 5 car cost will be multiplied by 0.5
+			cmv =  carcost * 0.5;
+			}
+			
+			if(!condition){ //makes the value lower by 10% if car condition is not good
+			cmv = cmv * 0.9;
+			}
+			currentvalue.innerHTML = cmv; //displays the current value of the car
+			}
+	
+        
+    </script>
+    
+</body>
+</html>
+
