@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<title>Toss coin Tadiaman</title>
+		<meta name="viewport"content="width=device-width,initial-scale=1.0">
+        <style>
+        	body {background: navy; 
+            	text-align: center;
+            	font-family: arial;
+                color: white;
+            }
+            button {padding: 10px; background:violet }
+            span {color: yellow}
+            #coin, h5 {color: yellow; }
+            #coin { background: gray; 
+            	width: 25px; 
+                height: 25px;
+                padding: 25px;          
+                border: 5px dashed darkgray;
+                border-radius: 50%;
+                margin: 0 auto;
+                
+            }
+            
+        </style>
+
+	</head>
+	<body onload="getGuess()">
+        <h1> Heads or Tail? </h1>
+        <h2 onclick="getGuess()"> Click here to change your Guess: <span id="guess"> </span></h2>
+        <h2 id="coin" onclick="flipCoin()"> H </h2>   
+        <h5> Click on the coin above to randomly change its face and compare with your guess </h5> 
+        <script>
+            /* do not forget to include comments to this script */
+
+            var getGuess = function() {
+                uGuess = prompt("Type H for head and T for tail","H");
+                uGuess = uGuess.toUpperCase(); // converting to an uppercase letter
+                if (uGuess != "H" && uGuess != "T") {
+                    alert("Wrong Input");
+                } else {
+                    guess.innerHTML = uGuess;
+                }
+            }
+
+            var flipCoin = function() { // function to change coin side using if else and conditional 
+                var face = document.getElementById("coin").innerHTML;
+                var coinFace = (Math.random() < 0.5) ? (face == "H" ? "T" : "H") : face; // if Math.random is less than 0.5, it will flip the coin to the opposite side.
+                document.getElementById("coin").innerHTML = coinFace; 
+                var guess = document.getElementById("guess").innerHTML; 
+                var result;
+		 if (guess == coinFace) {
+			alert("Your guess is correct!"); } //check and display if the user is correct
+		else {
+			alert("Your guess is incorrect!"); } //check and display if the user is incorrect
+            }
+        </script>
+	</body>
+</html>
