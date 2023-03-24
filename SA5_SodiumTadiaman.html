@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> My Online Shop</title>
+    <meta name="viewport"content="width=device-width,initial-scale=1.0">
+	<style>
+      span {color: blue; text-decoration:underline}
+      button {width: 100px; padding: 5px; background: pink;}
+	</style>
+
+	</head>
+<body>
+	<h1> Welcome to Dormitory 208 BLACKmarket </h1>
+	<h2> Please select from the following items(hide from the dorm managers) </h2>
+	<!--- provide your own 3 items and their prices in the list --->
+	<ol>
+		<li> Item#1 Cup Noodles: Php 30.00</li>
+		<li> Item#2 Coke: Php 25.00</li>
+		<li> Item#3 C2: Php 40.00 </li>
+	</ol>
+	<!-- the following will be used to display purchase information -->
+    <p> Item selected : <span id="item"> </span> </p>
+	<p> Qty bought : <span id="qty"> </span> </p>
+	<p> Amount to pay for the item: <span id="bill"> </span> </p>
+	<p> Current Total Bill <span id="totbill"> </span> </p>
+	<button onclick ="buyItem()"> Buy an Item </button>
+	<button onclick ="clearList()"> Clear </button>
+    
+    <script>
+    	/* do not forget to include comments in your answer */
+    		const item1 = {name: "Cup Noodles", price: 30.00};
+		const item2 = {name: "Coke", price: 25.00};
+		const item3 = {name: "C2", price: 40.00};
+		
+		let totalBill = 0; //to add total;
+
+
+		function buyItem() {
+			let itemNo = prompt("Enter item number:");
+			let qty = prompt("Enter quantity of item:");
+		
+		if (qty &&  !isNaN(qty)) {              // NaN = not a number. Checks if its an integer
+			qty =  parseInt(qty);
+				let item;
+
+			switch (itemNo) {                     //switch to check if user put item 1 to 3
+				case "1":
+					item = item1;
+					break;
+				case "2":
+					item = item2;
+					break;
+				case "3":
+					item = item3;
+					break;
+				default:
+			alert("Invalid product number"); //displays invalid product number if user does not put a number from 1 to 3
+			return;
+		}
+
+		document.getElementById("item").innerHTML = item.name;
+		document.getElementById("qty").innerHTML = qty;
+
+		let bill = item.price * qty;
+	
+		document.getElementById("bill").innerHTML = bill.toFixed(2); 
+
+		totalBill += bill; // this adds all the purchased item price to totbill
+		
+		document.getElementById("totbill").innerHTML = totalBill.toFixed(2); 
+		
+		
+			}else {
+				alert("You entered an invalid quantity"); // activates when qty is NaN
+			}
+		}
+
+			function clearList() {                                     //function to clear list
+				document.getElementById("item").innerHTML = "";
+				document.getElementById("qty").innerHTML = "";
+				document.getElementById("bill").innerHTML = "";
+				document.getElementById("totbill").innerHTML = ""; 
+				totalBill = 0; // clears total bill if user clicks Clear button
+			}
+
+		
+		
+					
+    </script>
+</body>
+
+</html>
+
