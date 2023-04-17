@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+			<title>FA12_Tadiaman Multiplication Table</title>
+			<meta charset="UTF-8"> 
+			<link rel="icon" href="icon.png" type="image/gif"> 
+			<meta name="keywords" content="HTML, CSS, JavaScript"> 
+	</head>
+	
+	<style>
+		table, td{
+			border: 1px solid black;
+			}
+		h1 {
+			color: blue;
+			text-align: center;
+			}
+		p {
+			text-align: center;
+			}
+		#userinput {
+			text-align: center;
+			align-items: center;
+			justify-content: center;
+			}
+		#table {
+			text-align: center;
+			align-items: center;
+			justify-content: center;
+			margin-top: 25px;
+			display: flex;
+			}
+			
+			
+
+
+
+	</style>
+
+	<body>
+	<h1>Multiplication Table</h1>
+	<p>[Enter a number between 2 and 10 :>]</p>
+	<div id="userinput">
+		<input type="number" id="rowNum" placeholder="Num of Rows"> by
+		<input type="number" id="colNum" placeholder="Num of Columns">
+		<br></br>
+		<button onclick="generateMultiplicationtable()">Click when you're ready!</button>
+		<br></br>
+	</div>			
+	<div id="table"></div>
+
+
+	<script>
+		function generateMultiplicationtable(){
+			var numRows = parseInt(document.getElementById("rowNum").value);
+			var numCols = parseInt(document.getElementById("colNum").value);
+			
+			if(numRows <= 2 || numRows >= 10 || numCols <= 2 || numCols >= 10){
+				alert("You did not input a number between 2 and 10. PLZ TRY AGAIN :)");
+				return;
+				}
+		
+			var table = "<table>";
+				for (var count = 1; count <= numRows; count++) {
+					table += "<tr>";
+				for (var count2 = 1; count2 <= numCols; count2++) {
+					table += "<td>" + (count*count2) + "</td>";
+				}
+				table += "</tr>";
+				}
+				table += "</table>";
+
+				document.getElementById("table").innerHTML = table;
+			}
+		</script>
+	</body>
+</html>
