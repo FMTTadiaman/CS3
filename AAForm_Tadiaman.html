@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tadiaman cs signup</title>
+	<style type="text/css">
+
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+			padding-lefts: 50px;
+		}
+
+		h1 {
+			text-align: center;
+			margin-bottom: 30px;
+		}
+
+		.title {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-bottom: 30px;
+		}
+
+		h3 {
+			margin-top: 0;
+		}
+
+		form {
+			max-width: 500px;
+			margin: auto;
+			padding: 20px;
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+			background-color: rgb(13,152,186);
+			width: 50%;
+			float: left;
+			position absolute;
+		
+			
+		}
+
+		}
+		fieldset {
+			border: 2px black;
+			width: 100%;
+		}
+
+		legend {
+			font-weight: bold;
+			text-align: center;
+			padding-bottom: 20px;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 8px;
+			font-weight: bold;
+		}
+
+		input[type="text"],
+		input[type="email"],
+		input[type="password"],
+		select,
+		textarea {
+			display: block;
+			width: 100%;
+			padding: 10px;
+			border-radius: 5px;
+			border: 2px solid #ddd;
+			margin-bottom: 20px;
+			font-size: 16px;
+			box-sizing: border-box;
+		}
+
+		input[type="text"]:focus,
+		input[type="email"]:focus,
+		input[type="password"]:focus,
+		select:focus,
+		textarea:focus {
+			border-color: #4CAF50;
+			box-shadow: 0px 0px 5px rgba(76, 175, 80, 0.2);
+		}
+		
+		input[type="submit"],
+		input[type="reset"] {
+			background-color: #4CAF50;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+		}
+
+		input[type="submit"]:hover,
+		input[type="reset"]:hover {
+			background-color: #3E8E41;
+		}
+
+		.output {
+			margin-top: 30px;
+			padding: 20px;
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+		}
+		
+
+		::placeholder{
+			color: grey;
+			}
+
+		input[type="submit"] {
+			width: 100%;
+		}		
+
+		input[type="reset"] {
+			width: 100%;
+		}	
+
+		fieldset {
+				border-style: 2px black;
+				}
+
+		p{
+			padding-left: 10px;
+			text-align: left;
+			color: 	#00008b;
+			font-weight: bold;
+			}
+
+		body {
+			background-image: url("https://scontent.xx.fbcdn.net/v/t1.15752-9/330674203_1176293693070434_2148431885209708359_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeFB9TnwiQfIVpHSTpiew0pblC2YuhECRFWULZi6EQJEVSEjtikE2yjQlDEiZc2JvLBS5UPHjLubXs4SkNyp9WPS&_nc_ohc=saSh9nOuprUAX9NjVMt&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdR7JCeA1pdHlyzMAI_z6qvk5D0dovJekrEct16Hvyt3sQ&oe=6483BBFE");
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 100px;
+			}
+		#Otform{
+			border:1px solid black;
+			background: white;
+			max-width: 500px;
+			margin: auto;
+			border-radius:8px;
+			padding-top:10px;
+			position:absolute;
+			right: 150px;
+			width: 30%
+			}
+
+		
+		
+	</style>
+</head>
+	<body>
+		<form onsubmit="return otInfo()">
+  		<fieldset>
+   
+			<div></br>
+			<legend>User Information</legend>
+    			<label for="name">Name:</label>
+    			<input type="text" id="name" name="name" placeholder="First name MI, Last name" required onblur="checkInput(this)" onfocus="checkOutput(this)">
+			</div>
+
+    			<label for="username">Username:</label>
+    			<input type="text" id="username" name="username" placeholder="Example: Fmradio" required onblur="checkInput(this)" onfocus="checkOutput(this)">
+
+    			<label for="gender">Gender:</label>
+    			<select id="gender" name="gender" required onblur="checkInput(this)" onfocus="checkOutput(this)">
+      			<option value="">-- Select Gender --</option>
+      			<option value="Male">Male</option>
+     			<option value="Female">Female</option>
+      			<option value="Prefer not to mention">Prefer not to mention</option>
+    			</select>
+
+			
+    			<label for="password">Password:</label>
+    			<input type="password" id="password" name="password" required onblur="checkInput(this)" onfocus="checkOutput(this)">
+			
+
+
+			<div></br>
+    			<label for="email">Email Address:</label>
+    			<input type="email" id="email" name="email" placeholder="Example@gmail.com" required onblur="checkInput(this)" onfocus="checkOutput(this)">
+			</div>
+
+
+    			<label for="address">Address:</label>
+    			<textarea id="address" name="address" placeholder="House number, Street Name, City, Postal Code, country"  required onblur="checkInput(this)" onfocus="checkOutput(this)"></textarea>
+
+			<div></br>
+    			<label for="interests">Interests:</label>
+    			<textarea id="interests" name="interests"></textarea>
+  			</fieldset>
+			</div>
+	
+			<div></br>
+  			<input type="submit" value="Submit" >
+			</div>
+
+		<div></br>
+  		<input type="reset" value="Reset" onclick="resetInfo()">
+		</div>
+	</fieldset>
+</form>
+
+
+
+	<div id="Otform">
+		<legend>Profile Tab</legend>
+
+	
+			<div id="Otsum"></div>
+
+					<p> Name: <span id="otName"> </span></p>
+					<p> Username: <span id="otUsername"> </span> </p>
+					<p> Gender: <span id="otGender"> </span> </p>
+					<p> Password: <span id="otPassword"> </span> </p>
+					<p> Email Address: <span id="otEmail"> </span> </p>
+					<p> Address: <span id="otAddress"> </span> </p>
+					<p> Interest: <span id="otInterests"> </span> </p>
+
+					</div>
+					</div>
+
+
+	<script>
+		
+		function checkInput(inputElement) {
+			if (inputElement.value.trim() === "") {
+    				inputElement.style.border = "2px solid red";
+  			} else {
+   				 inputElement.style.border = " 2px solid green";
+  		}	
+	}
+		
+		function checkOutput(inputElement) {
+				inputElement.style.border = "2px solid black";
+				}
+		
+				function resetInfo() {
+					document.getElementById("name").style.border = "";
+
+					document.getElementById("username").style.border = "";
+
+					document.getElementById("gender").style.border = "";
+
+					document.getElementById("password").style.border = "";
+
+					document.getElementById("email").style.border = "";
+
+					document.getElementById("address").style.border = "";
+
+					document.getElementById("interests").style.border = "";
+	
+
+					document.getElementById("otName").innerHTML = "";
+
+					document.getElementById("otUsername").innerHTML = "";
+
+					document.getElementById("otGender").innerHTML = "";
+
+					document.getElementById("otPassword").innerHTML = "";
+
+					document.getElementById("otEmail").innerHTML = "";
+
+					document.getElementById("otAddress").innerHTML = "";
+
+					document.getElementById("otInterests").innerHTML = "";
+					}
+
+		function otInfo() {
+				var n = document.getElementById("name").value;
+				document.getElementById("otName").innerHTML = n;
+		
+
+				var un = document.getElementById("username").value;
+				document.getElementById("otUsername").innerHTML = un;
+		
+
+				var g = document.getElementById("gender").value;
+				document.getElementById("otGender").innerHTML = g;
+		
+
+				var pw = document.getElementById("password").value;
+				document.getElementById("otPassword").innerHTML = pw;
+		
+
+				var em = document.getElementById("email").value;
+				document.getElementById("otEmail").innerHTML = em;
+		
+
+				var add = document.getElementById("address").value;
+				document.getElementById("otAddress").innerHTML = add;
+		
+
+				var int = document.getElementById("interests").value;
+				document.getElementById("otInterests").innerHTML = int;
+		
+		return false;
+	}
+
+
+
+
+
+
+
+		</script>
+	</body>
+</html>
